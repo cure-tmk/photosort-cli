@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "locale": "ja",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "ES2017",
+    "rootDir": "src",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "src/types",
+      "node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2017",
+      "es2015",
+      "es5",
+      "es6"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

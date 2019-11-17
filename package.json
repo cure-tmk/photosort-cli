@@ -1,0 +1,24 @@
+{
+  "name": "photosort",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tomotetra <cure.tomoki@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/exif": "^0.6.0",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.4.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "run-dev": "ts-node src/index.ts",
+    "build": "NODE_ENV=production webpack"
+  }
+}
