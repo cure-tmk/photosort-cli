@@ -3,7 +3,7 @@
     "locale": "ja",
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "target": "ES2017",
     "rootDir": "src",
