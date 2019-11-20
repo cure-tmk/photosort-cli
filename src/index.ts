@@ -1,6 +1,6 @@
 import * as commander from 'commander';
 import logger from './logger';
-import { photosort } from './photosort';
+import photosort from './photosort';
 
 const VERSION = '0.0.1';
 
@@ -20,7 +20,7 @@ commander
       logger.error('provide a target')
       process.exit(1);
     }
-    photosort(commander.args)
+    photosort(commander.args, commander.output)
   })
   .parse(process.argv);
 
