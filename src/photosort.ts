@@ -26,7 +26,10 @@ const generateDestFile = (dest: string, dateTimeString: string): string => {
   if (!date.isValid()) {
     throw new Error('invalid date error');
   }
-  return `${dest}/${date.year()}/${padZero(date.month() + 1)}/${padZero(date.date())}/`
+  const year = date.year()
+  const month = [year, padZero(date.month() + 1)].join('_');
+  const day = [month, padZero(date.date())].join('_');
+  return `${dest}/${year}/${month}/${day}/`
 }
 
 const photosort = async (filepaths: string[], destination: string) => {
@@ -41,9 +44,8 @@ const photosort = async (filepaths: string[], destination: string) => {
       await mv(filepath, `${destPath}/${filename}`);
       logger.default(`successfully moved ${filepath}`)
     } catch (err) {
-      logger.warn(`failed to sort ${filepaths}`);
+      logger.warn(`failed to sort ${filepath}`);
       console.warn(err)
-      await mkdir(`${dest}/unsorted/${filename}`);
     }
   }
 }
