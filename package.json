@@ -8,6 +8,9 @@
     "chalk": "^3.0.0",
     "commander": "^4.0.1",
     "exif": "^0.6.0",
+    "make-dir": "^3.0.0",
+    "moment": "^2.24.0",
+    "move-file": "^1.2.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
