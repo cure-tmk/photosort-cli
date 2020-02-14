@@ -42,9 +42,9 @@ const photosort = async (filepaths: string[], destination: string) => {
       const destPath = generateDestFile(dest, exif.CreateDate);
       await mkdir(destPath);
       await mv(filepath, `${destPath}/${filename}`);
-      logger.default(`successfully moved ${filepath}`)
+      logger.default(`successfully sorted photos! > ${filepath}`)
     } catch (err) {
-      logger.warn(`failed to sort ${filepath}`);
+      logger.error(`failed to sort ${filepath}`);
       console.warn(err)
     }
   }

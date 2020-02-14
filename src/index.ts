@@ -6,7 +6,7 @@ const VERSION = '0.0.1';
 
 commander
   .version(VERSION)
-  .usage('<targt path> -o <output path>')
+  .usage('<target path> -o <output path>')
   .requiredOption('-o, --output <path>', 'output directory')
   .option('-d, --debug', 'run in debug mode', false)
   .action((files) => {
